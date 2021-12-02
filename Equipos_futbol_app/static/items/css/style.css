@@ -1,6 +1,22 @@
 body {
     background-image: url("../img/campo.jpg");
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: 100% 100vh;
 }
 
+.img-escudo {
+width: 4rem;
+heigth: 4rem;
+
+}
+.floatRight {
+    float: right !important;
+}
+
+.pelota_champions {
+    width: 20%;
+    heigth: 20%;
+    position: absolute;
+    left: 40%;
+    bottom: 40%;
+}
