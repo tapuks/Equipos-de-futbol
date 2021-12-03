@@ -29,15 +29,13 @@ body {
 @keyframes mymove {
     50% {transform: rotate(180deg);}
     100% {transform: rotate(360deg);}
-
 }
 
 .container-pelota {
     width: 13rem;
     position: absolute;
-    left: 39%;
+    left: 40%;
     top: 35%;
-
 }
 
 .container-teams {

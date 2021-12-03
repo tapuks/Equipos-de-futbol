@@ -17,9 +17,9 @@ class Equipo(models.Model):
 
 class Plantilla (models.Model):
     nombre_jugador = models.CharField(max_length=55)
-    imagen_jugador = models.ImageField(upload_to='plantilla', null=True, blank=True)
     position_jugador = models.CharField(max_length=55)
     dorsal= models.IntegerField()
+    pais = models.CharField(max_length=55, blank=True)
     equipo= models.ForeignKey(Equipo, on_delete=models.CASCADE)
 
     class Meta:
@@ -27,4 +27,24 @@ class Plantilla (models.Model):
         verbose_name_plural = 'plantillas'
 
     def __str__(self):
-        return self.nombre_jugador + " con dorsal " + str(self.dorsal) + " juega en la posicion de " + self.position_jugador
+        return str(self.nombre_jugador) + " con dorsal " + str(self.dorsal) + " juega en la posicion de " + str(self.position_jugador)
+
+class Trofeos (models.Model):
+    copa_rey = models.IntegerField( blank=True,
+        null=True)
+    copa_liga = models.IntegerField( blank=True,
+        null=True)
+    copa_europa= models.IntegerField( blank=True,
+        null=True)
+    copa_uefa = models.IntegerField( blank=True,
+        null=True)
+    equipo= models.ForeignKey(Equipo, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name ='trofeo'
+        verbose_name_plural = 'trofeos'
+
+    def __str__(self):
+        return str(self.equipo)
+
+    # CLASEEEE TROFEOO HECHA, HACER LA VIEW, URL Y MOSTRAR LOS TROFEOS

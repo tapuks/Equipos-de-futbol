@@ -23,7 +23,9 @@ from Equipos_futbol_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',Equipos_futbol_app.views.home)
+    path('',Equipos_futbol_app.views.home),
+    path('plantilla/<int:id_equipo>/', Equipos_futbol_app.views.plantilla),
+
 ]
 
 # CONFIGURAMOS LA PATH PARA QUE CUANDO BUSQUE UNA IMAGEN EN EL ADMINISTRADOR NOS LA MUESTRE
