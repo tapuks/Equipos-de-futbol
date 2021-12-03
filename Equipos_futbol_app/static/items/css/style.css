@@ -1,22 +1,46 @@
 body {
     background-image: url("../img/campo.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100vh;
+    background-size: cover;
 }
+
 
 .img-escudo {
     width: 4rem;
     heigth: 4rem;
 
 }
+.img-escudo:hover {
+    width: 8rem;
+    heigth: 8rem;
+    cursor: pointer;
+
+}
+
 .floatRight {
     float: right !important;
 }
 
 .pelota_champions {
-    width: 20%;
-    heigth: 20%;
-    position: absolute;
-    left: 40%;
-    bottom: 40%;
+    width: 100%;
+    heigth: 100%;
+    animation: mymove 5s linear infinite;
 }
+@keyframes mymove {
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+
+}
+
+.container-pelota {
+    width: 13rem;
+    position: absolute;
+    left: 39%;
+    top: 35%;
+
+}
+
+.container-teams {
+    position: relative;
+}
+

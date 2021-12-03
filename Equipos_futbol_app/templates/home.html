@@ -15,7 +15,7 @@
 <body>
     <div class="container">
 
-        <div>
+        <div class="container-teams">
     <!--        1-->
             <div class="row mt-5">
                 <div class="col-6"><img class="img-escudo floatRight mx-5"  src="{{ equipos.0.imagen_escudo.url }}" alt="" ></div>
@@ -65,14 +65,14 @@
                 <div class="col-6  "><img class="img-escudo mx-5"  src="{{ equipos.17.imagen_escudo.url }}" alt="" ></div>
             </div>
 
-            <div>
+            <div class="container-pelota">
                 <img class="pelota_champions" src="{% static 'items/img/balon_champions.png' %}">
             </div>
 
         </div>
 
 
-
+            <h1 style="color: white">{{ plantillas.0.equipo }}</h1>
 
     </div>
 
